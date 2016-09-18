@@ -1,0 +1,9 @@
+{
+  "commands": {
+    "NugetPackAndPublish": {
+      "fileName": "cmd.exe",
+      "workingDirectory": ".",
+      "arguments": "/c NugetPackAndPublish.bat"
+    }
+  }
+}
