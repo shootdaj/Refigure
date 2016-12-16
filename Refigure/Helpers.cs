@@ -34,38 +34,38 @@
         //    return JsonConvert.DeserializeObject(json);
         //}
 
-        /// <summary>
-        /// Merges the calling path in front of the given path.
-        /// </summary>
-        /// <param name="path1">Left side of path</param>
-        /// <param name="path2">Right side of path</param>
-        /// <returns></returns>
-        public static string MergePath(this string path1, string path2, bool forwardSlash = false)
-        {
-            if (path1.EndsWith(forwardSlash ? @"/" : @"\"))
-            {
-                if (path2.StartsWith(forwardSlash ? @"/" : @"\"))
-                {
-                    return path1.Remove(path1.Length - 1) + path2;
-                }
-                return path1 + path2;
-            }
-            else
-            {
-                if (path2.StartsWith(forwardSlash ? @"/" : @"\"))
-                {
-                    return path1 + path2;
-                }
-                return path1 + (forwardSlash ? @"/" : @"\") + path2;
-            }
-        }
+        ///// <summary>
+        ///// Merges the calling path in front of the given path.
+        ///// </summary>
+        ///// <param name="path1">Left side of path</param>
+        ///// <param name="path2">Right side of path</param>
+        ///// <returns></returns>
+        //public static string MergePath(this string path1, string path2, bool forwardSlash = false)
+        //{
+        //    if (path1.EndsWith(forwardSlash ? @"/" : @"\"))
+        //    {
+        //        if (path2.StartsWith(forwardSlash ? @"/" : @"\"))
+        //        {
+        //            return path1.Remove(path1.Length - 1) + path2;
+        //        }
+        //        return path1 + path2;
+        //    }
+        //    else
+        //    {
+        //        if (path2.StartsWith(forwardSlash ? @"/" : @"\"))
+        //        {
+        //            return path1 + path2;
+        //        }
+        //        return path1 + (forwardSlash ? @"/" : @"\") + path2;
+        //    }
+        //}
 
-        /// <summary>
-        /// Merges two URL paths.
-        /// </summary>
-        public static string MergeURL(this string path1, string path2)
-        {
-            return path1.MergePath(path2, true);
-        }
+        ///// <summary>
+        ///// Merges two URL paths.
+        ///// </summary>
+        //public static string MergeURL(this string path1, string path2)
+        //{
+        //    return path1.MergePath(path2, true);
+        //}
     }
 }
